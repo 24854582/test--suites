@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#F4EBDD" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>测测你是哪种猫 · 猫格档案馆</title>
+    <meta
+      name="description"
+      content="12 道直觉题，测出你的隐藏猫格。橘猫、黑猫、布偶、狸花、暹罗、英短、奶牛、三花，你是哪一只？"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="测测你是哪种猫？" />
+    <meta property="og:description" content="不是品种鉴定，是一次灵魂认领。12 道题，领走你的猫格档案。" />
+    <meta property="og:image" content="preview/cover.jpg" />
+    <meta property="og:image:width" content="780" />
+    <meta property="og:image:height" content="1688" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="测测你是哪种猫？" />
+    <meta name="twitter:description" content="不是品种鉴定，是一次灵魂认领。12 道题，领走你的猫格档案。" />
+    <meta name="twitter:image" content="preview/cover.jpg" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232D2723'/%3E%3Cpath d='M18 28 15 13l13 8h8l13-8-3 15c3 4 4 8 4 13 0 10-8 15-18 15S14 51 14 41c0-5 1-9 4-13Z' fill='%23F4EBDD'/%3E%3Ccircle cx='25' cy='38' r='3' fill='%232D2723'/%3E%3Ccircle cx='39' cy='38' r='3' fill='%232D2723'/%3E%3Cpath d='M29 45h6l-3 3z' fill='%23E5543D'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="page-stamp page-stamp--left" aria-hidden="true">MEOW<br />ARCHIVE</div>
+    <div class="page-stamp page-stamp--right" aria-hidden="true">NO.<br />1990</div>
+
+    <main id="app" class="app-shell">
+      <!-- ======================================================
+           〇 · 口令门
+           ====================================================== -->
+      <section class="screen screen--gate is-active" id="screen-gate" aria-label="输入入馆口令">
+        <div class="gate-top">
+          <a class="wordmark" href="./" aria-label="猫格档案馆首页">
+            <span>CAT ARCHIVE</span>
+            <em>猫格档案馆</em>
+          </a>
+          <span class="edition">NO.1990</span>
+        </div>
+
+        <div class="gate-card">
+          <div class="gate-cat" id="gate-cat" aria-hidden="true"></div>
+          <p class="kicker"><span></span>入馆凭证<span></span></p>
+          <h1 class="gate-title">对暗号，<br /><em>才准吸猫。</em></h1>
+          <p class="gate-copy">请输入分享者给你的 4 位入馆口令</p>
+
+          <form id="gate-form" novalidate>
+            <label class="sr-only" for="gate-input">4 位入馆口令</label>
+            <div class="pin-field" id="pin-field">
+              <span class="pin-box" data-pin="0"></span>
+              <span class="pin-box" data-pin="1"></span>
+              <span class="pin-box" data-pin="2"></span>
+              <span class="pin-box" data-pin="3"></span>
+              <input
+                class="pin-input"
+                id="gate-input"
+                type="text"
+                inputmode="numeric"
+                pattern="[0-9]*"
+                maxlength="4"
+                autocomplete="off"
+                autocapitalize="off"
+                autocorrect="off"
+                spellcheck="false"
+                aria-describedby="gate-error"
+              />
+            </div>
+            <p class="gate-error" id="gate-error" role="alert" aria-live="polite"></p>
+            <button class="btn btn--primary btn--gate" id="gate-submit" type="submit">
+              <span>开门见猫</span>
+              <span class="btn-arrow" aria-hidden="true">→</span>
+            </button>
+          </form>
+
+          <p class="gate-foot">一次输入，本次有效 · 不收集个人信息</p>
+        </div>
+
+        <p class="gate-bottom">MEOW IS THE ANSWER.</p>
+      </section>
+
+      <!-- ======================================================
+           一 · 封面
+           ====================================================== -->
+      <section class="screen screen--cover" id="screen-cover" aria-label="测试封面">
+        <header class="site-nav">
+          <a class="wordmark" href="./">
+            <span>CAT ARCHIVE</span>
+            <em>猫格档案馆</em>
+          </a>
+          <span class="nav-chip">VOL. 1990</span>
+        </header>
+
+        <div class="cover-heading">
+          <p class="kicker"><span></span>今日份猫格鉴定</p>
+          <h1 class="cover-title">
+            <span>测测你是</span>
+            <strong>哪种猫</strong><span class="title-q" aria-hidden="true">?</span>
+          </h1>
+          <p class="cover-deck">不是品种鉴定，<br />是一次灵魂认领。</p>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-grid" aria-hidden="true"></div>
+          <div class="hero-sun" aria-hidden="true"></div>
+          <span class="hero-tape" aria-hidden="true">ADOPT<br />ME?</span>
+          <div class="hero-frame" id="hero-cat"></div>
+          <div class="hero-sticker" aria-hidden="true">
+            <span>CAT FILE</span>
+            <strong>1990</strong>
+          </div>
+          <div class="hero-note" aria-hidden="true">有点黏人<br />但不多</div>
+          <div class="hero-caption">
+            <span>ORANGE CAT</span>
+            <span>NO. 01</span>
+          </div>
+        </div>
+
+        <button class="btn btn--primary btn--start" id="btn-start" type="button">
+          <span>开始测猫</span>
+          <span class="btn-arrow" aria-hidden="true">→</span>
+        </button>
+
+        <div class="cover-meta" aria-label="测试信息">
+          <span><b>12</b> 道直觉题</span>
+          <span class="meta-dot" aria-hidden="true"></span>
+          <span>约 <b>2</b> 分钟</span>
+          <span class="meta-dot" aria-hidden="true"></span>
+          <span>仅供娱乐</span>
+        </div>
+        <p class="cover-social">已有 <b id="cat-count">12,846</b> 只两脚兽领到猫格</p>
+
+        <footer class="site-footer">
+          <span>CAT ARCHIVE © 1990</span>
+          <span>本馆不提供捉老鼠服务</span>
+        </footer>
+      </section>
+
+      <!-- ======================================================
+           二 · 答题
+           ====================================================== -->
+      <section class="screen screen--quiz" id="screen-quiz" aria-label="答题">
+        <header class="quiz-top">
+          <button class="icon-btn" id="btn-quit" type="button" aria-label="退出测试，返回封面">←</button>
+          <span class="quiz-brand">CAT ARCHIVE</span>
+          <span class="quiz-count"><b id="quiz-current">01</b><i>/ 12</i></span>
+        </header>
+
+        <div
+          class="progress"
+          id="progress"
+          role="progressbar"
+          aria-label="答题进度"
+          aria-valuemin="0"
+          aria-valuemax="12"
+          aria-valuenow="0"
+        >
+          <i id="progress-fill"></i>
+        </div>
+
+        <div class="quiz-card" id="quiz-card">
+          <div class="q-meta">
+            <span class="q-scene" id="q-scene">空闲日</span>
+            <span class="q-number">Q.<b id="q-number">01</b></span>
+          </div>
+          <h2 class="q-title" id="q-title"></h2>
+          <div class="options" id="options" role="radiogroup" aria-labelledby="q-title"></div>
+        </div>
+
+        <nav class="quiz-nav" aria-label="答题操作">
+          <button class="btn-text" id="btn-prev" type="button">← 上一题</button>
+          <button class="btn btn--primary" id="btn-next" type="button" disabled>
+            <span>下一题</span>
+            <span class="btn-arrow" aria-hidden="true">→</span>
+          </button>
+        </nav>
+        <p class="quiz-hint">凭第一反应选，别想太久</p>
+      </section>
+
+      <!-- ======================================================
+           三 · 结算中
+           ====================================================== -->
+      <section class="screen screen--loading" id="screen-loading" aria-label="正在生成结果">
+        <div class="loading-poster">
+          <div class="loading-cat" id="loading-cat" aria-hidden="true"></div>
+          <div class="loading-scan" aria-hidden="true"></div>
+        </div>
+        <p class="loading-title">正在把你揉成一只猫<span class="typing-dots" aria-hidden="true">...</span></p>
+        <p class="loading-sub" id="loading-sub">先闻闻你的耳朵弧度</p>
+        <div class="loading-bar" aria-hidden="true"><i></i></div>
+      </section>
+
+      <!-- ======================================================
+           四 · 结果
+           ====================================================== -->
+      <section class="screen screen--result" id="screen-result" aria-label="测试结果">
+        <header class="result-nav">
+          <a class="wordmark" href="./">
+            <span>CAT ARCHIVE</span>
+            <em>猫格档案</em>
+          </a>
+          <button class="nav-chip nav-chip--button" id="btn-result-save" type="button">保存猫格图</button>
+        </header>
+
+        <div class="result-wrap">
+          <article class="cat-file" id="result-card">
+            <header class="file-top">
+              <span>CAT FILE / 猫格档案</span>
+              <span id="file-no">NO. 1990-0001</span>
+            </header>
+
+            <div class="result-hero">
+              <div class="result-art" id="result-art" aria-hidden="true"></div>
+              <div class="result-heading">
+                <p class="result-kicker">YOUR CAT TYPE</p>
+                <p class="result-lead">你的猫格是</p>
+                <h1 id="result-name">橘猫</h1>
+                <p class="result-title" id="result-title">人间小太阳</p>
+              </div>
+              <div class="match-stamp" aria-label="猫格匹配度">
+                <strong id="match-value">91</strong>
+                <span><i>%</i>匹配</span>
+              </div>
+              <p class="result-en" id="result-en">ORANGE CAT · O-01</p>
+            </div>
+
+            <div class="result-body">
+              <blockquote class="result-quote" id="result-quote">「天大的事，吃完再说。」</blockquote>
+              <p class="result-desc" id="result-desc"></p>
+              <ul class="tag-list" id="result-tags" aria-label="猫格标签"></ul>
+
+              <div class="result-actions">
+                <button class="btn btn--primary" id="btn-save" type="button">
+                  <span>保存猫格图</span>
+                  <span class="btn-arrow" aria-hidden="true">↓</span>
+                </button>
+                <button class="btn btn--outline" id="btn-copy" type="button">复制文案</button>
+              </div>
+              <p class="save-note">1080 × 1620 高清长图 · 小红书 / 朋友圈可用</p>
+
+              <section class="file-section">
+                <h3 class="section-title"><span>01</span>猫格雷达<em>CAT SPECTRUM</em></h3>
+                <div class="radar-wrap">
+                  <svg id="radar" viewBox="0 0 360 350" role="img" aria-label="六维猫格雷达图"></svg>
+                </div>
+                <ul class="dim-list" id="dim-list"></ul>
+              </section>
+
+              <section class="file-section">
+                <h3 class="section-title"><span>02</span>猫格成分<em>WHAT'S INSIDE</em></h3>
+                <div class="type-bars" id="type-bars"></div>
+                <p class="section-note">你身上不只有一种猫，只是这只叫得最大声。</p>
+              </section>
+
+              <section class="file-section file-section--split">
+                <div class="mini-card">
+                  <h4>恋爱说明书 <span>LOVE</span></h4>
+                  <p id="love-text"></p>
+                </div>
+                <div class="mini-card mini-card--tint">
+                  <h4>充电方式 <span>RECHARGE</span></h4>
+                  <p id="recharge-text"></p>
+                </div>
+              </section>
+
+              <section class="file-section">
+                <h3 class="section-title"><span>03</span>超能力与盲点<em>SUPERPOWER</em></h3>
+                <ul class="strength-list" id="strength-list"></ul>
+                <p class="blind-spot" id="blind-text"></p>
+              </section>
+
+              <section class="file-section">
+                <h3 class="section-title"><span>04</span>饲养说明书<em>HOW TO KEEP ME</em></h3>
+                <ol class="care-list" id="care-list"></ol>
+              </section>
+
+              <section class="file-section">
+                <h3 class="section-title"><span>05</span>猫际关系<em>COMPATIBILITY</em></h3>
+                <div class="compat-grid">
+                  <div class="compat-card">
+                    <div class="compat-head">
+                      <span class="compat-label">最佳猫搭子</span>
+                      <span class="compat-art" id="best-art"></span>
+                    </div>
+                    <p class="compat-name" id="best-name"></p>
+                    <p class="compat-why" id="best-why"></p>
+                  </div>
+                  <div class="compat-card compat-card--warn">
+                    <div class="compat-head">
+                      <span class="compat-label">容易互相误伤</span>
+                      <span class="compat-art" id="clash-art"></span>
+                    </div>
+                    <p class="compat-name" id="clash-name"></p>
+                    <p class="compat-why" id="clash-why"></p>
+                  </div>
+                </div>
+              </section>
+
+              <div class="rarity-line">
+                <span>稀有度</span>
+                <strong id="rarity">18.6%</strong>
+                <span>的两脚兽是这个猫格</span>
+              </div>
+
+              <footer class="file-footer">
+                <div>
+                  <span>猫格档案馆</span>
+                  <b>CAT ARCHIVE · 1990</b>
+                </div>
+                <span class="file-seal">已<br />认<br />领</span>
+              </footer>
+            </div>
+          </article>
+        </div>
+
+        <div class="result-bottom">
+          <button class="btn btn--outline" id="btn-restart" type="button">再测一次</button>
+          <button class="btn-text" id="btn-home" type="button">回到封面</button>
+        </div>
+        <p class="disclaimer">仅供娱乐 · 你的猫格由你本人最终解释</p>
+      </section>
+    </main>
+
+    <!-- 海报预览 / 保存 -->
+    <div class="poster-modal" id="poster-modal" aria-hidden="true">
+      <div class="poster-backdrop" data-close-poster></div>
+      <div class="poster-sheet" role="dialog" aria-modal="true" aria-labelledby="poster-title">
+        <header class="poster-head">
+          <div>
+            <p>YOUR CAT FILE</p>
+            <h2 id="poster-title">长按图片，保存到相册</h2>
+          </div>
+          <button class="close-btn" id="btn-close-poster" type="button" aria-label="关闭">×</button>
+        </header>
+        <div class="poster-preview" id="poster-preview">
+          <div class="poster-loading" id="poster-loading">
+            <span></span>
+            正在冲印猫格档案…
+          </div>
+          <img id="poster-img" alt="我的猫格测试结果海报" />
+        </div>
+        <p class="poster-tip">iPhone：长按图片 →「存储到照片」<br />Android：长按图片 →「保存图片」，或点下方按钮</p>
+        <div class="poster-actions">
+          <button class="btn btn--primary" id="btn-poster-save" type="button">保存到相册</button>
+          <button class="btn btn--outline" id="btn-poster-close" type="button">完成</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="data.js" defer></script>
+    <script src="scoring.js" defer></script>
+    <script src="art.js" defer></script>
+    <script src="app.js" defer></script>
+  </body>
+</html>
